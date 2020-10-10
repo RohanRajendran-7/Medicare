@@ -1,7 +1,12 @@
 <div class="container-fluid">
-
-    <h1>Popular Categories</h1>
-    <br>
+    <h3>Deliver to: check pincode</h3>
+    <span style="margin: 10px;">Select your location: </span>
+    <input type="text" [(ngModel)]="pin" id="pin" placeholder="enter pincode" style="width: 50%; margin: 5px;">
+    <input type="button" class="btn btn-warning" id="check" (click)="check()" value="Check">
+    <p *ngIf="toggle==false" style="color: tomato;">Sorry!! Not deliverable yet!</p>
+    <p *ngIf="toggle==true" style="color: cornflowerblue;">Hurray!! We deliver to you!</p>
+    <h1 style="margin: 10px;">Popular Categories</h1>
+    <br><br>
     <div class="row">
         <div *ngFor= "let category of categoryList">
         <div class="col-sm" *ngIf = 'category.popular == true' >
@@ -21,7 +26,7 @@
     <div class="row">
         <div class="col-sm">
             <div style="height: 350px;">
-                <img class="card-img-top" style="height: 250px; width: 250px; align-items: center;" [src]="'https://pm1.narvii.com/7333/e4964c8ab0c43ef5af82fdfb198f09d5c04701b0r1-590-590v2_hq.jpg'" alt="img">
+                <img class="card-img-top" style="height: 150px; width: 250px; align-items: center;" [src]="'https://pm1.narvii.com/7333/e4964c8ab0c43ef5af82fdfb198f09d5c04701b0r1-590-590v2_hq.jpg'" alt="img">
                 <div class="card-body">
                     <h5>Countless Familes Served</h5>
                 </div>
@@ -29,7 +34,7 @@
         </div>
         <div class="col-sm">
             <div style="height: 350px;">
-                <img class="card-img-top" style="height: 250px; width: 250px; align-items: center;" [src]="'https://ak.picdn.net/shutterstock/videos/17208073/thumb/12.jpg'" alt="img">
+                <img class="card-img-top" style="height: 150px; width: 250px; align-items: center;" [src]="'https://ak.picdn.net/shutterstock/videos/17208073/thumb/12.jpg'" alt="img">
                 <div class="card-body">
                     <h5>Over 30,000 orders delivered</h5>
                 </div>

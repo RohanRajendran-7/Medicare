@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { AddPinComponent } from './add-pin/add-pin.component';
 import { AddmedicineComponent } from './addmedicine/addmedicine.component';
 import { AdmincategoriesComponent } from './admincategories/admincategories.component';
 import { AdminmedicinesComponent } from './adminmedicines/adminmedicines.component';
@@ -40,7 +41,8 @@ const routes: Routes = [
   {path:'admin/edit',component:UpdateAdminComponent},
   {path:'payment', component:PaymentComponent},
   {path:'success',component:SuccessComponent},
-  {path:'signup',component:SignupComponent}
+  {path:'signup',component:SignupComponent},
+  {path:'admin/pin',component:AddPinComponent}
 
 ];
 

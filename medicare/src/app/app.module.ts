@@ -25,6 +25,7 @@ import { UpdateCategoryComponent } from './update-category/update-category.compo
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { UpdateAdminComponent } from './update-admin/update-admin.component';
 import { HomeComponent } from './home/home.component';
+import { AddPinComponent } from './add-pin/add-pin.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { HomeComponent } from './home/home.component';
     UpdateCategoryComponent,
     AddAdminComponent,
     UpdateAdminComponent,
-    HomeComponent
+    HomeComponent,
+    AddPinComponent
   ],
   imports: [
     BrowserModule,
