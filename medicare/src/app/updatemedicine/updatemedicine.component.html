@@ -31,13 +31,13 @@
     <label for="name">Medicine name</label>
     <input style="width: 75%;" class="form-control" name="name" type="text" [(ngModel)]="medicine.med_name" placeholder="Enter Question Name"/>
     <label for="description">description</label>
-    <input style="width: 75%;" class="form-control" name="description" type="textarea" [(ngModel)]="medicine.Description" placeholder="Enter description"/>
+    <input style="width: 75%;" class="form-control" name="description" type="textarea" [(ngModel)]="medicine.description" placeholder="Enter description"/>
     <label for="directions">directions</label>
-    <input style="width: 75%;" class="form-control" name="directions" type="textarea" [(ngModel)]="medicine.Directions" placeholder="Enter Directions"/>
+    <input style="width: 75%;" class="form-control" name="directions" type="textarea" [(ngModel)]="medicine.directions" placeholder="Enter Directions"/>
     <label for="amount">amount</label>
     <input style="width: 75%;" class="form-control" name="amount" type="textarea" [(ngModel)]="medicine.amount" placeholder="Enter amount"/>
     <label for="Category">Category</label>
-    <select id="filter" class="form-control" name="filter" style="float: left; " [(ngModel)]="medicine.Category">
+    <select id="filter" class="form-control" name="filter" style="float: left; " [(ngModel)]="medicine.category">
         <option>Select one </option>
         <option *ngFor="let category of categoryList">{{category.name}}</option>
     </select>

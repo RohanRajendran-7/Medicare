@@ -35,10 +35,10 @@
         <div class="card-body text-center">
             <h5 class="card-title">{{medicine.med_name}}</h5>
             <p class="card-text">Id : {{medicine.id}}</p>
-            <p class="card-text">Description : {{medicine.Description}}</p>
+            <p class="card-text">Description : {{medicine.description}}</p>
             <p class="card-text">Name : {{medicine.med_name}}</p>
             <p class="card-text">Price :<span style="margin-right: 3px; font-weight: bolder; color: darkred;"> &#8377;{{medicine.price}}</span>  <s style="font-size: small;">&#8377;{{medicine.amount}}</s>  </p>
-            <p class="card-text">Category : {{medicine.Category}}</p>
+            <p class="card-text">Category : {{medicine.category}}</p>
             <button class="btn btn-secondary" *ngIf ="toggle1 == true " (click)="sub()">-</button>
             <input type="text" name="quantity" *ngIf ="toggle1 == true" disabled value="{{quantity}}"> 
             <button class="btn btn-secondary" *ngIf ="toggle1 == true" (click)="add()">+</button>
