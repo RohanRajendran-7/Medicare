@@ -1,0 +1,44 @@
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Admin Dashboard </div>
+      <div class="list-group list-group-flush">
+        <a href="admin" class="list-group-item list-group-item-action bg-dark"><p style="color: white;">Dashboard</p></a>
+        <a href="admin/medicines" class="list-group-item list-group-item-action bg-dark"><p style="color: white;">Medicines</p></a>
+        <a href="admin/categories" class="list-group-item list-group-item-action bg-dark"><p style="color: white;">Categories</p></a>
+        <a href="admin/orders" class="list-group-item list-group-item-action bg-dark"><p style="color: white;">Orders</p></a> 
+<a href="admin/pin" class="list-group-item list-group-item-action bg-dark"><p style="color: white;">Pincode</p></a>
+    
+      </div>
+    </div>
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+          <img class="btn btn-primary" id="menu-toggle" src="https://cdn0.iconfinder.com/data/icons/user-interface-150/24/List_menu_toggle-512.png" alt="" style="width: 50px; height: 50px;">
+          
+
+      
+        </nav>
+<div class="container-fluid">
+    <h1>Add medicine</h1><br><br>
+
+    <label for="id">Id</label>
+    <input class="form-control" name="id" type="text" [(ngModel)]="medicine.id" placeholder="Enter medicine Id"/>
+    <label for="medicine">Medicine</label>
+    <input class="form-control" name="medicine" type="text" [(ngModel)]="medicine.med_name" placeholder="Enter medicine Name"/>
+    <label for="description">Description</label>
+    <input class="form-control" name="description" type="textarea" [(ngModel)]="medicine.description" placeholder="Enter description"/>
+    <label for="directions">Directions</label>
+    <input class="form-control" name="directions" type="textarea" [(ngModel)]="medicine.Directions" placeholder="Enter directions"/>
+    <label for="category">Category</label>
+    <select id="category" class="form-control" name="category" style="float: left;" [(ngModel)]="medicine.category">
+        <option>Select one </option>
+        <option *ngFor="let category of categoryList">{{category.name}}</option>
+    </select>
+    <br>
+    <label for="price">price</label>
+    <input class="form-control" name="price" type="text" [(ngModel)]="medicine.price" placeholder="Enter price"/>
+    <label for="amount">Amount</label>
+    <input class="form-control" name="amount" type="text" [(ngModel)]="medicine.amount" placeholder="Enter price"/>
+
+    <button type="button" class="btn btn-success" style="margin: 5px;" (click)="addmedicine()">Create medicine</button>
+</div>
